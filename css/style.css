@@ -1,0 +1,167 @@
+body, 
+html {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(208, 208, 208);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  box-shadow: 0 0 12px 7px #000;
+  background-color: #fff;
+}
+
+.section-offset {
+  padding-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.hero__subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.hero__list {
+  padding-bottom: 10px;
+}
+
+.hero__text {
+  color: rgb(31, 31, 31);
+}
+
+.hero__text-bold {
+  font-weight: 700;
+  color: #484848;
+  font-size: 16px;
+}
+
+.hero__link {
+  color: rgb(98, 98, 98);
+  transition: color ease-out .3s;
+}
+
+.hero__link:active {
+  color: rgb(79, 79, 79);
+}
+
+.hero__link:hover {
+  color: rgb(55, 55, 55);
+}
+
+.hero__link:focus {
+  color: rgb(24, 24, 24);
+}
+
+.hero__paragph {
+  padding-bottom: 10px;
+}
+
+.work__title {
+  margin-bottom: 15px;
+}
+
+.work__list {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.work__list:last-child {
+  padding-bottom: 0;
+}
+
+.work__item {
+  width: 260px;
+  margin-right: 15px;
+  box-shadow: 0 0 10px 2px #000;
+}
+
+.work__item:last-child {
+  margin-right: 0;
+}
+
+.cart__body {
+  align-items: flex-end;
+  justify-content: center;
+  height: 210px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  background-color: rgb(192, 192, 192);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.work-js:nth-child(1) .cart__body {
+  background-image: url(../img/todo.png);
+}
+
+.work-js:nth-child(2) .cart__body {
+  background-image: url(../img/game.png);
+}
+
+.work-html:nth-child(1) .cart__body {
+  background-image: url(../img/landing.png);
+}
+
+.cart__link {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #5787bb;
+  font-size: 12px;
+  color: #fff;
+}
+
+.cart__link:last-child {
+  margin-right: 0;
+}
+
+.cart__descr {
+  padding: 0 5px 5px;
+  font-size: 14px;
+  text-align: center;
+}
