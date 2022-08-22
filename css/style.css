@@ -1,11 +1,11 @@
 body, 
 html {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
   padding: 0;
+}
+
+* {
   box-sizing: border-box;
-  background-color: rgb(208, 208, 208);
 }
 
 h1,
@@ -34,16 +34,13 @@ a {
 }
 
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 60px;
-  box-sizing: border-box;
-  box-shadow: 0 0 12px 7px #000;
-  background-color: #fff;
+  padding: 50px 0;
 }
 
 .section-offset {
-  padding-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .flex {
@@ -58,12 +55,24 @@ a {
 }
 
 .hero__subtitle {
+  position: relative;
   font-size: 20px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.hero__list {
-  padding-bottom: 10px;
+.hero__subtitle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 1px;
+  background-color: rgb(24, 125, 15);
+}
+
+.hero__list:not(:last-child) {
+  padding-bottom: 30px;
 }
 
 .hero__text {
@@ -94,17 +103,46 @@ a {
 }
 
 .hero__paragph {
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+}
+
+.hero__list li {
+  position: relative;
+  padding-left: 10px;
+}
+
+.hero__list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.hero__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: rgb(24, 125, 15);
+}
+
+.hero__list .hero__item {
+  padding-left: 0;
+}
+
+.hero__item::before {
+  display: none;
 }
 
 .work__title {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .work__list {
   flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 30px;
+  
+  padding-bottom: 50px;
 }
 
 .work__list:last-child {
@@ -112,13 +150,46 @@ a {
 }
 
 .work__item {
+  position: relative;
   width: 260px;
   margin-right: 15px;
   box-shadow: 0 0 10px 2px #000;
+  overflow: hidden;
 }
 
 .work__item:last-child {
   margin-right: 0;
+}
+
+.work__item::before {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(-20%);
+  opacity: 0;
+  transition: transform ease .6s, opacity ease .6s;
+}
+
+.work__item:hover::before {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform ease .6s, opacity ease .6s;
+}
+
+.work-js:nth-child(1):before {
+  content: "Функционал приложения основан на добавлении, сохранении и, при необходимости, удалении задач. Есть возможность переключаться между разными страницами в приложении. Массивы храняться в localstorage";
+}
+
+.work-js:nth-child(2):before {
+  content: "Игра написана полностью на языке JavaScript, представляет из себя набор массивов с карточками и функционалом выбора размера игрового поля. Так же, каждый раунд начинается с обновления таймера, который поддерживает темп игры";
+}
+
+.work-html:nth-child(1):before {
+  content: 'Лендинг написан при помощи технологии flex, полностью адаптивен. Проработаны функции анимации модального окна, а так же адаптированы слайдеры и "бургер" меню';
 }
 
 .cart__body {
@@ -141,10 +212,6 @@ a {
   background-image: url(../img/game.png);
 }
 
-.work-html:nth-child(1) .cart__body {
-  background-image: url(../img/landing.png);
-}
-
 .cart__link {
   display: inline-block;
   padding: 10px;
@@ -154,10 +221,33 @@ a {
   background-color: #5787bb;
   font-size: 12px;
   color: #fff;
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  transition: opacity ease .6s, transform ease .3s;
+}
+
+.cart__link:nth-child(1) {
+  left: 10px;
+}
+
+.cart__link:nth-child(2) {
+  right: 10px;
 }
 
 .cart__link:last-child {
   margin-right: 0;
+}
+
+.cart__link:hover {
+  transition: transform ease .3s;
+  transform: scale(1.05);
+}
+
+.work__item:hover .cart__link {
+  opacity: 1;
+  z-index: 10;
+  transition: opacity ease .6s;
 }
 
 .cart__descr {
