@@ -216,6 +216,14 @@ a {
   background-image: url(../img/game.png);
 }
 
+.work-html:nth-child(1) .cart__body {
+  background-image: url(../img/landing-1.png);
+}
+
+.work-html:nth-child(2) .cart__body {
+  background-image: url(../img/landing-2.png);
+}
+
 .cart__link {
   display: inline-block;
   padding: 10px;
