@@ -38,7 +38,7 @@ a {
 }
 
 .wrapper {
-  min-width: 1200px;
+  min-width: 1440px;
   margin: 0 auto;
   padding: 50px 200px;
 }
@@ -192,12 +192,20 @@ a {
   content: "Игра написана полностью на языке JavaScript, представляет из себя набор массивов с карточками и функционалом выбора размера игрового поля. Так же, каждый раунд начинается с обновления таймера, который поддерживает темп игры";
 }
 
+.work-js:nth-child(3):before {
+  content: "Приложение написано на JS, стили заданы через CSS. Функционал состоит из добавления студентов в таблицу, сортировка таблицы, поиск студентов по параментрам";
+}
+
 .work-html:nth-child(1):before {
   content: 'Лендинг написан при помощи технологии flex, полностью адаптивен. Проработаны функции анимации модального окна, а так же адаптированы слайдеры и "бургер" меню';
 }
 
 .work-html:nth-child(2):before {
   content: 'Простой лендинг, адаптированный на основе резиновой верстки, написанный на технологии flex';
+}
+
+.work-html:nth-child(3):before {
+  content: 'Адаптивный лендинг, написанный на SCSS и PUG, собран через gulp. Так же использовался js для подключения слайдеров и написания "бургер" меню';
 }
 
 .cart__body {
@@ -207,7 +215,7 @@ a {
   margin-bottom: 15px;
   padding-bottom: 5px;
   background-color: rgb(192, 192, 192);
-  background-position: center;
+  background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -220,12 +228,20 @@ a {
   background-image: url(../img/game.png);
 }
 
+.work-js:nth-child(3) .cart__body {
+  background-image: url(../img/table.png);
+}
+
 .work-html:nth-child(1) .cart__body {
   background-image: url(../img/landing-1.png);
 }
 
 .work-html:nth-child(2) .cart__body {
   background-image: url(../img/landing-2.png);
+}
+
+.work-html:nth-child(3) .cart__body {
+  background-image: url(../img/landing-3.png);
 }
 
 .cart__link {
