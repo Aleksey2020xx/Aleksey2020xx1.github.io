@@ -2,6 +2,3 @@
 	path = new-landing
 	url = https://github.com/Aleksey2020xx/new-landing
 
-[submodule "test-work"]
-	path = test-work
-	url = https://github.com/Aleksey2020xx/test-work
